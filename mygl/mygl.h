@@ -7,5 +7,8 @@
     #include <GL/glxew.h>
 #endif
 
+#include <GL/freeglut.h>
+
+
 
 

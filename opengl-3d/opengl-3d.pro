@@ -7,6 +7,10 @@ exists(../deps.pri) {
     include(../deps.pri)
 }
 
+INCLUDEPATH += ../
+
+LIBS += -L../mygl -lmygl
+
 unix {
     LIBS += -lGL -lGLU -lglut -lGLEW
 }
@@ -16,19 +20,11 @@ win32 {
 }
 
 SOURCES += \
-    helpers.cpp \
-    shader.cpp \
-    shader_program.cpp \
+    helpers.cpp \    
     opengl_3d.cpp
 
-include(deployment.pri)
-qtcAddDeployment()
-
 HEADERS += \
-    helpers.h \
-    shader.h \
-    shader_program.h \
-    mygl.h
+    helpers.h
 
 DISTFILES += \
     shaders/basic.frag \
