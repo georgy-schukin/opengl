@@ -1,4 +1,5 @@
-#include <GL/glew.h>
+#include "mygl/mygl.h"
+
 #include <GL/freeglut.h>
 #include <cstdlib>
 #include <cstdio>
