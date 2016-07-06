@@ -7,6 +7,10 @@ exists(../deps.pri) {
     include(../deps.pri)
 }
 
+INCLUDEPATH += ../
+
+LIBS += -L../mygl -lmygl
+
 unix {
     LIBS += -lGL -lGLU -lglut -lGLEW
 }
@@ -18,9 +22,5 @@ win32 {
 SOURCES += opengl_vbo.cpp \
     helpers.cpp
 
-include(deployment.pri)
-qtcAddDeployment()
-
 HEADERS += \
-    helpers.h \
-    mygl.h
+    helpers.h

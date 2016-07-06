@@ -1,6 +1,6 @@
 #pragma once
 
-#include "mygl.h"
+#include "mygl/mygl.h"
 
 #include <vector>
 #include <cstddef>
