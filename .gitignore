@@ -1,1 +1,10 @@
 *.pro.user
+
+*.a
+*.exe
+*.lib
+*.so
+*.out
+*.dll
+*.o
+*.d
