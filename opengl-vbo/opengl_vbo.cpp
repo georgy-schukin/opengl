@@ -1,8 +1,6 @@
 #include "mygl/mygl.h"
 #include "helpers.h"
 
-#include <GL/freeglut.h>
-
 #include <cstdlib>
 #include <cstdio>
 #include <iostream>

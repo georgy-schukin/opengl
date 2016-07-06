@@ -1,7 +1,8 @@
 #pragma once
 
-#include "mygl.h"
+#include "mygl/mygl.h"
 
+#include <glm/glm.hpp>
 #include <vector>
 #include <cstddef>
 
