@@ -1,14 +1,16 @@
-#include "mygl.h"
-#include "shader.h"
-#include "shader_program.h"
+#include "mygl/mygl.h"
+#include "mygl/shader.h"
+#include "mygl/shader_program.h"
 #include "helpers.h"
 
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 #include <iostream>
 
 GLuint vao, vbo[2];
 GLuint texture;
-Shader *vert_shader = 0, *frag_shader = 0;
-ShaderProgram *shader_program = 0;
+mygl::Shader *vert_shader = 0, *frag_shader = 0;
+mygl::ShaderProgram *shader_program = 0;
 
 void initVBO() {
     glGenVertexArrays(1, &vao); // generate one VAO (to store all bindings)
@@ -67,9 +69,9 @@ void initTexture() {
 }
 
 void initShaders() {
-    shader_program = new ShaderProgram();
-    vert_shader = new Shader(GL_VERTEX_SHADER, "shaders/tex.vert");
-    frag_shader = new Shader(GL_FRAGMENT_SHADER, "shaders/tex.frag");
+    shader_program = new mygl::ShaderProgram();
+    vert_shader = new mygl::Shader(GL_VERTEX_SHADER, "shaders/tex.vert");
+    frag_shader = new mygl::Shader(GL_FRAGMENT_SHADER, "shaders/tex.frag");
 
     shader_program->attachShader(vert_shader);
     shader_program->attachShader(frag_shader);
